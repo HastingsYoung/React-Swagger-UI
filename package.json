@@ -1,0 +1,29 @@
+{
+  "name": "react-swagger-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sagui build",
+    "dist": "sagui dist",
+    "format": "sagui format",
+    "start": "sagui develop --port 3000",
+    "test": "sagui test",
+    "test:lint": "sagui test:lint",
+    "test:typecheck": "sagui test:typecheck",
+    "test:unit": "sagui test:unit --coverage",
+    "test:unit:watch": "sagui test:unit --watch"
+  },
+  "keywords": [],
+  "author": "hastings_gl@outlook.com",
+  "license": "ISC",
+  "devDependencies": {
+    "sagui": "^11.1.0"
+  },
+  "dependencies": {
+    "material-ui": "^0.19.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
+}
