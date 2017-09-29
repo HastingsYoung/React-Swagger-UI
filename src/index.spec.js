@@ -1,3 +1,3 @@
-describe('react-swagger-ui', function() {
+describe('react-swagger', function() {
   it('should work', function() {})
 })
