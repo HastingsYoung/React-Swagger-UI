@@ -13,7 +13,7 @@ npm i --save react-swagger
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactSwaggerUI from 'react-swagger';
-import './node_modules/react-swagger/index.css';
+import './node_modules/react-swagger/dist/index.css';
 
 const models = [
   {
