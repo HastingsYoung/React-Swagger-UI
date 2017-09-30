@@ -1,6 +1,6 @@
 {
   "name": "react-swagger",
-  "version": "1.0.8",
+  "version": "1.0.7",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -27,8 +27,6 @@
     "react-dom": "^16.0.0"
   },
   "files": [
-    "dist/index.js",
-    "dist/index.css",
-    "dist/*.css"
+    "dist/*"
   ]
 }
