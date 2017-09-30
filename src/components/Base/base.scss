@@ -1,0 +1,21 @@
+@import '../../styles/base';
+
+.base {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: Helvetica, "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Arial;
+  box-shadow: $section-shadow;
+  background: #ffffff;
+  padding: 1%;
+  .subTitle {
+    color: #6f6f6f;
+    font-weight: 200;
+    font-size: 12px;
+  }
+  .desc {
+    margin: 15px 0;
+  }
+}

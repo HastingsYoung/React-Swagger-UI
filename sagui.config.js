@@ -3,14 +3,14 @@
  * see: http://sagui.js.org/
  */
 module.exports = {
-  pages: ["index"]
-  ,libraries: [
+  pages: ['index'],
+  libraries: [
     {
       main: 'index',
-      umdName: 'ReactSwaggerUI'
-    }
+      umdName: 'ReactSwaggerUI',
+    },
   ],
   style: {
-    extract: false
-  }
+    cssModules: false,
+  },
 }

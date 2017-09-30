@@ -14,7 +14,7 @@ export default class Models extends Component {
       listItems.push(
         <ListItem
           key={i}
-          primaryText={d.name}
+          primaryText={<h4>{d.name}</h4>}
           initiallyOpen={false}
           primaryTogglesNestedList
           nestedItems={[<Model key={i} model={d.attributes} />]}

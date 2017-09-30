@@ -4,13 +4,14 @@
 import React, { Component } from 'react'
 import DropDownMenu from 'material-ui/DropDownMenu'
 import MenuItem from 'material-ui/MenuItem'
+import Unlock from '../../icons/unlock.svg'
 import Lock from '../../icons/lock.svg'
 import './schemes.css'
 
 export default class Schemes extends Component {
   constructor(props) {
     super(props)
-    this.state = { value: 1 }
+    this.state = { value: 1, lock: true }
   }
 
   render() {
@@ -24,8 +25,13 @@ export default class Schemes extends Component {
           </DropDownMenu>
         </div>
         <div className="schemes-right">
-          <button>
-            <label>Authorize</label> <img src={Lock} alt="lock" />
+          <button
+            onClick={() => {
+              this.setState({ lock: !this.state.lock })
+            }}
+          >
+            <label>Authorize</label>{' '}
+            {this.state.lock ? <img src={Lock} alt="lock" /> : <img src={Unlock} alt="unlock" />}
           </button>
         </div>
       </div>

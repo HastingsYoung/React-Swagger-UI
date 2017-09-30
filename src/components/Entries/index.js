@@ -16,9 +16,9 @@ export default class Entries extends Component {
         <ListItem
           key={i}
           primaryText={
-            <Entry>
-              <EntryLabel type={d.type} />
-              <EntryAPI api={d.api} desc={d.desc} />
+            <Entry deprecated={d.deprecated}>
+              <EntryLabel {...d} />
+              <EntryAPI {...d} />
             </Entry>
           }
         />
@@ -44,14 +44,17 @@ export default class Entries extends Component {
 
 class Entry extends Component {
   render() {
-    return <div className="entry">{this.props.children}</div>
+    return (
+      <div className={this.props.deprecated ? 'entry deprecated' : 'entry'}>
+        {this.props.children}
+      </div>
+    )
   }
 }
 
 class EntryLabel extends Component {
   render() {
     let root = 'entry-label'
-    if (this.props.disabled) root += ' disabled'
     switch (this.props.type) {
       case 'post':
         return <div className={root + ' post'}>POST</div>

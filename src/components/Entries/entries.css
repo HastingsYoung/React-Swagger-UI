@@ -18,7 +18,8 @@
   font-size: 14px;
   line-height: 25px;
   width: 80px;
-  height: 25px; }
+  height: 25px;
+  position: relative; }
 
 .entry-label.get {
   background: #61AFFE; }
@@ -32,8 +33,18 @@
 .entry-label.delete {
   background: #F93E3E; }
 
-.entry-label.disabled {
+.entry.deprecated {
   color: #ebebeb !important; }
+  .entry.deprecated:before {
+    content: '';
+    height: 1px;
+    border-bottom: solid 1px silver;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0; }
+  .entry.deprecated .entry-label {
+    background: #ebebeb !important; }
 
 .entry-api span {
   margin: 0 15px; }

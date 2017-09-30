@@ -5,82 +5,120 @@ A simple React wrapper of Swagger API in Material design.
 ![alt text](https://github.com/HastingsYoung/react-swagger-ui/raw/master/screenshots/react-swagger.gif "demo")
 
 ## Usage
+```sh
+npm i --save react-swagger
+```
+
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactSwaggerUI from 'react-swagger';
- 
-const models = [{
-    name: "Model 01",
+
+
+const models = [
+  {
+    name: 'Model 01',
     attributes: {
-        "id": {
-            "type": "integer",
-            "default": 0
-        },
-        "quantity": {
-            "type": "integer",
-            "default": 0
-        },
-        "status": {
-            "type": "string",
-            "default": ""
-        },
-        "complete": {
-            "type": "boolean",
-            "default": false
-        }
-    }
-}, {
-    name: "Model 02",
+      id: {
+        type: 'integer',
+        default: 0,
+      },
+      quantity: {
+        type: 'integer',
+        default: 0,
+      },
+      status: {
+        type: 'string',
+        default: '',
+      },
+      complete: {
+        type: 'boolean',
+        default: false,
+      },
+    },
+  },
+  {
+    name: 'Model 02',
     attributes: {
-        "id": {
-            "type": "integer",
-            "default": 0
-        },
-        "quantity": {
-            "type": "integer",
-            "default": 0
-        },
-        "status": {
-            "type": "string",
-            "default": ""
-        },
-        "complete": {
-            "type": "boolean",
-            "default": false
-        }
-    }
-}];
- 
-const entries = [{
-    type: "get",
-    api: "/model",
-    desc: "The description of model api"
-}, {
-    type: "post",
-    api: "/model",
-    desc: "The description of model api"
-}, {
-    type: "put",
-    api: "/model",
-    desc: "The description of model api"
-}, {
-    type: "delete",
-    api: "/model",
-    desc: "The description of model api"
-}];
- 
-const entriesGroup = [{
-    groupName: "Model APIs",
-    groupDesc: "The description of Model APIs",
-    entries
-}];
-const modelsGroup = [{
-    groupName: "Models",
-    groupDesc: "The description of Models",
-    models
-}];
- ReactDOM.render(<ReactSwaggerUI entries={entriesGroup} models={modelsGroup}/>, document.getElementById('root'));
+      id: {
+        type: 'integer',
+        default: 0,
+      },
+      quantity: {
+        type: 'integer',
+        default: 0,
+      },
+      status: {
+        type: 'string',
+        default: '',
+      },
+      complete: {
+        type: 'boolean',
+        default: false,
+      },
+    },
+  },
+]
+
+const entries = [
+  {
+    type: 'get',
+    api: '/model',
+    desc: 'The description of model api',
+    deprecated: true,
+  },
+  {
+    type: 'post',
+    api: '/model',
+    desc: 'The description of model api',
+  },
+  {
+    type: 'put',
+    api: '/model',
+    desc: 'The description of model api',
+  },
+  {
+    type: 'delete',
+    api: '/model',
+    desc: 'The description of model api',
+  },
+  {
+    type: 'get',
+    api: '/model',
+    desc: 'The description of model api',
+  },
+]
+
+const entriesGroup = [
+  {
+    groupName: 'Model APIs',
+    groupDesc: 'The description of Model APIs',
+    entries,
+  },
+]
+const modelsGroup = [
+  {
+    groupName: 'Models',
+    groupDesc: 'The description of Models',
+    models,
+  },
+]
+
+const base = {
+  title: "Swagger Example API",
+  subTitle: "[ Base URL: example.swagger.io/v2 ]"
+}
+
+
+
+ReactDOM.render(
+  <ReactSwaggerUI entries={entriesGroup} models={modelsGroup} base={base}>
+    This is a sample server Swagger UI. You can find out more about Swagger at http://swagger.io or on
+    irc.freenode.net, #swagger. For this sample, you can use the api key special-key to test the authorization filters.
+  </ReactSwaggerUI>,
+  document.getElementById('root')
+)
+
 ```
 
 ## License

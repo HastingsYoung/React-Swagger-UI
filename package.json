@@ -27,6 +27,7 @@
     "react-dom": "^16.0.0"
   },
   "files": [
-    "dist/index.js"
+    "dist/index.js",
+    "dist/*.css"
   ]
 }

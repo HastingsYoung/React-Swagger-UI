@@ -1,0 +1,18 @@
+.base {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: Helvetica, "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Arial;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+  padding: 1%; }
+  .base .subTitle {
+    color: #6f6f6f;
+    font-weight: 200;
+    font-size: 12px; }
+  .base .desc {
+    margin: 15px 0; }
+
+/*# sourceMappingURL=base.css.map */
