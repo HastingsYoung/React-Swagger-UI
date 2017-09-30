@@ -1,7 +1,6 @@
 .DS_Store
 .sagui
 coverage
-dist
 node_modules
 npm-debug.log
 .idea/
