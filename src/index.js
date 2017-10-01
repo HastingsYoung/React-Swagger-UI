@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+// import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import Base from './components/Base'
@@ -7,7 +7,7 @@ import Schemes from './components/Schemes'
 import Models from './components/Models'
 import Entries from './components/Entries'
 import './styles/app.css'
-
+/*
 const models = [
   {
     name: 'Model 01',
@@ -101,6 +101,7 @@ const base = {
   title: 'Swagger Example API',
   subTitle: '[ Base URL: example.swagger.io/v2 ]',
 }
+  */
 
 class ReactSwaggerUI extends Component {
   render() {
@@ -135,7 +136,8 @@ ReactSwaggerUI.propTypes = {
   entries: PropTypes.array,
 }
 
-ReactDOM.render(
+/*
+  ReactDOM.render(
   <ReactSwaggerUI entries={entriesGroup} models={modelsGroup} base={base}>
     This is a sample server Swagger UI. You can find out more about Swagger at http://swagger.io or
     on irc.freenode.net, #swagger. For this sample, you can use the api key special-key to test the
@@ -143,5 +145,6 @@ ReactDOM.render(
   </ReactSwaggerUI>,
   document.getElementById('root')
 )
+  */
 
 export default ReactSwaggerUI

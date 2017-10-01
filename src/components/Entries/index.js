@@ -55,7 +55,11 @@ class Entry extends Component {
 class EntryLabel extends Component {
   render() {
     let root = 'entry-label'
-    switch (this.props.type) {
+    let type = this.props.type
+    if (typeof type === 'string') {
+      type = type.toLowerCase()
+    }
+    switch (type) {
       case 'post':
         return <div className={root + ' post'}>POST</div>
       case 'put':
